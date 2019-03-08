@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>form属性示例</title>
+  	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>毕业生信息</h1>
+	<form id="testform" method="get" action="">
+		<fieldset style="width: 450px">
+			<legend style="color:red">学生信息</legend>
+			姓&nbsp;&nbsp;名&nbsp;<input type="text" name="name" autofocus="autofocus" required placeholder="请输入姓名"/>
+			<span style="color:red">&nbsp;*</span>
+			<br/>
+			学&nbsp;&nbsp;号&nbsp;<input type="number" name="number" autofocus="autofocus" required placeholder="请输入学号"/>
+			<span style="color:red">&nbsp;*</span>
+			<br/>
+			手&nbsp;&nbsp;机&nbsp;<input type="tel" name="phone" autofocus="autofocus" required placeholder="请输入手机号"/> 
+			<span style="color:red">&nbsp;*</span>
+			<br/>
+			邮&nbsp;&nbsp;箱&nbsp;<input type="email" name="email" autofocus="autofocus" required placeholder="请输入邮箱地址"/>
+			<span style="color:red">&nbsp;*</span>
+			<br/>
+		</fieldset>
+		<br/>
+		<fieldset style="width: 450px">
+			<legend style="color:red">录取情况</legend>
+			录取学校&nbsp;<input type="text" name="school" autocomplete="on" list="schools" autofocus="autofocus" required/>
+			<datalist id="schools">
+				<option>河北师范大学</option>
+				<option>河北经贸大学</option>
+				<option>河北科技大学</option>
+				<option>河北大学</option>
+				<option>北京大学</option>
+				<option>清华大学</option>
+				<option>重庆大学</option>
+				<option>河南大学</option>
+				<option>郑州大学</option>
+				<option>厦门大学</option>
+			</datalist>
+			<br/>
+			入学成绩&nbsp;<input type="text" name="number" autofocus="autofocus" required/>
+			<br/>
+			入学时间&nbsp;<input type="date" name="datedemo" autofocus="autofocus" required/> 
+			<br/>
+		</fieldset>
+		<br/>
+		<input type="submit" value="提交"/>
+	</form>
+</body>
+</html>
