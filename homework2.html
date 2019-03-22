@@ -15,13 +15,39 @@
     </div>
 </body>
 <script>
+    var times=[];
+    var data=[]; 
     document.getElementById("search"). onclick= function(){
-        var data = document.getElementById("content").value;
+        for (var length = 0; length < localStorage.length; length++) {
+            var key = localStorage.key(length);
+            var value = localStorage.getItem(key);
+            times[length]=key;
+            data[length]=value;
+        }
+        var content = document.getElementById("content").value;
         var time = new Date().getTime();
-        localStorage.setItem(time, data);
+        var index=0;
+        for(var i=0;i<data.length;i++){
+            if(content==data[i]){
+                index=i;
+                break;
+            }
+            index=-1;
+        }
+        if(index==-1){
+            localStorage.setItem(time, content);
+            data[data.length]=content;
+        }
+        else{
+            localStorage.removeItem(localStorage.key(index));
+            localStorage.setItem(time, content); 
+            for(var i=0;i<data.length-index;i++){
+                data[index+i]=data[index+i+1];
+            } 
+            data[data.length-1]=content;
+        }
         var history=document.getElementById("history");
-        while(history.hasChildNodes())
-        {
+        while(history.hasChildNodes()){
             history.removeChild(history.firstChild);
         }
         for (var i = 0; i < localStorage.length; i++) {
@@ -39,6 +65,8 @@
     document.getElementById("remove").onclick=function(){
         if(window.confirm("是要全部清除搜索记录吗？")){
             localStorage.clear();
+            times=[];
+            data=[];
             var history=document.getElementById("history");
             while(history.hasChildNodes()){
                 history.removeChild(history.firstChild);
