@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="icon">
+</head>
+<body>
+    <div style="width:400px; height:250px; border:1px gray solid;">
+        <input style="width:195px; height:40px; margin-left:10px; margin-top:10px; border:1px solid #e8b367;" type="search" name="content" placeholder="请输入想查找的商品" id="content"/>
+        <input style="width:140px; height:30px; color:gray;" type="button" name="search" value="搜索" id="search"/>
+        <p style="margin-left:10px; margin-top:4px;">最近搜索</p>
+        <div style="width:360px; height:130px; float:left;" id="history"></div>
+        <img style="float:left; margin-top:45px; margin-left:10px;" src="1.png" id="remove">
+    </div>
+</body>
+<script>
+    document.getElementById("search"). onclick= function(){
+        var data = document.getElementById("content").value;
+        var time = new Date().getTime();
+        localStorage.setItem(time, data);
+        var history=document.getElementById("history");
+        while(history.hasChildNodes())
+        {
+            history.removeChild(history.firstChild);
+        }
+        for (var i = 0; i < localStorage.length; i++) {
+            var result = '<div style="background:#e0e0e0; margin-left:10px; margin-bottom:11px; float:left; width:auto; height:28px; line-height:28px; display:inline-block !important; display:inline;">';
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            result +=  value ;
+            result += '</div>';
+            var a=document.createElement("div");
+            history.appendChild(a);
+            a.innerHTML = result;
+        }
+    }
+
+    document.getElementById("remove").onclick=function(){
+        if(window.confirm("是要全部清除搜索记录吗？")){
+            localStorage.clear();
+            var history=document.getElementById("history");
+            while(history.hasChildNodes()){
+                history.removeChild(history.firstChild);
+            }
+        } 
+    }
+</script>
+</html> 
