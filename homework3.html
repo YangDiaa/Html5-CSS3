@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="200">
+	</canvas>
+</body>
+<script>
+    var canvas=document.getElementById("canvas");
+	var context=canvas.getContext("2d");
+    var img = new Image(); 
+    var imgs = ['1.jpg','2.jpg']; 
+    var num = Math.floor(Math.random()*2); 
+    img.src = imgs[num]; 
+    canvas.style.backgroundImage='url('+img.src+')'; 
+
+    context.beginPath();
+    context.fillStyle='gray';
+    context.fillRect(0,0,400,200);
+    context.closePath();
+    context.globalCompositeOperation = "destination-out";
+
+    var offsetX = canvas.offsetLeft;
+    var offsetY = canvas.offsetTop; 
+    var mousedown = false; 
+
+    canvas.addEventListener("mousedown",function (e){
+        e.preventDefault(); 
+        mousedown=true; 
+    })
+
+    canvas.addEventListener("mouseup",function (e){
+        e.preventDefault(); 
+        mousedown=false; 
+    })
+    
+    canvas.addEventListener("mousemove",function (e){
+        var num=0;
+        e.preventDefault(); 
+        if(mousedown) { 
+            var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0;
+            var y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0; 
+            context.beginPath(); 
+            context.arc(x, y, 30, 0, Math.PI * 2); 
+            context.fill(); 
+            context.closePath();
+            var imgData=context.getImageData(0,0,400,200);
+            for(var i=0;i<4*400*200;i++){
+                if( (i+1) % 4 == 0 ){
+                    if(imgData.data[i] == 0){
+                        num++;
+                    }
+                }
+            }
+            if( num / (400*200) > 0.85 ){
+                context.clearRect(0,0,400,200);
+            }   
+        } 
+    })    
+</script>
+</html>
