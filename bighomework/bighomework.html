@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      .back{
+        background: url(img/back.png) no-repeat center;
+        width: 100%;
+      }
+      ul{
+        list-style: none;
+      }
+      @media only screen and (min-width: 700px){
+        #pc{
+          display: block;
+        }
+        #phone{
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 750px){
+        #pc{
+          display: none;
+        }
+        #phone{
+          display: block;
+        }
+      }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#myNav">
+  <!-- pc端 -->
+  <div id="pc" style="width: 100%; background: #dddddd;">
+    <div class="container-fluid" style="background: black;" >
+      <nav class="navbar navbar-inverse navbar-right" style="background:black; margin: 0 auto">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-1">
+            <ul class="nav navbar-nav">
+              <li><img src="img/tell.png" class="img-responsive" style="margin-top: 10px"></li>
+              <li style="color:white;"><a href="#">400-808-8682</a></li>
+              <li style="color:white;"><a href="#">请登录</a></li>
+              <li style="margin-top:15px; color:white;">|</li>
+              <li style="color:white;"><a href="#">注册</a></li>    
+            </ul>   
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- 导航 -->
+    <div class="container" style="background: #e1e1e1;">
+      <nav class="navbar navbar-default" id='myNav' style="margin: 0 auto; border: none; background:#e1e1e1;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <img src="img/logo.png" class="img-responsive" style="margin-right: 80px;">
+        </div>
+        <div class="collapse navbar-collapse" id="col-1">
+          <ul class="nav navbar-nav">
+            <li style="margin-right: 20px"><a href="#shouye" style="color: orange; text-decoration:underline;">首页</a></li>
+            <li style="margin-right: 20px"><a href="#rmlx">热门路线</a></li>
+            <li style="margin-right: 20px"><a href="#qztj">签证推荐</a></li>
+            <li style="margin-right: 20px"><a href="#smyj">使命愿景</a></li>   
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="generic" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner" >
+        <div class="item active">
+          <img alt="First slide" src="img/banner.jpg" class="img-responsive">
+          <div style="position: absolute; left: 110px; top: 50px; color: white;">
+            <h2>悠游古欧洲 遍览德法瑞意</h2>
+            <p>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
+            <p>少女峰、大运河游船、金色列车，西庸城堡</p>
+          </div>
+          <div style="position: absolute; left: 280px; top: 300px; width:584px; height: 48px">
+            <div style="width: 150px; height: 48px; background: #d3d3d8; float: left">
+              <img src="img/position.png" style="margin-top: 2px; margin-left: 20px">
+              <span style="margin-left: 10px; line-height: 50px; font-size: 15px; color: #9fa0a1">目的地</span>
+            </div>
+            <input type="text" style="width: 309px; height: 48px; float: left" placeholder="  |  日本   美国   英国   地中海"/>
+            <button style="width: 125px; height: 48px; background: #e8420a; border: none; float: left">
+              <img src="img/search.png" style="margin-left: 10px; margin-top: 5px">
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <img alt="Second slide" src="img/banner2.jpg" class="img-responsive">
+          <div style="position: absolute; left: 110px; top: 50px; color: white;">
+            <h2>悠游古欧洲 遍览德法瑞意</h2>
+            <p>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
+            <p>少女峰、大运河游船、金色列车，西庸城堡</p>
+          </div>
+          <div style="position: absolute; left: 280px; top: 300px; height: 48px">
+            <div style="width: 150px; height: 48px; background: #d3d3d8; float: left">
+              <img src="img/position.png" style="margin-top: 2px; margin-left: 20px">
+              <span style="margin-left: 10px; line-height: 50px; font-size: 15px; color: #9fa0a1">目的地</span>
+            </div>
+            <input type="text" style="width: 309px; height: 48px; float: left" placeholder="  |  日本   美国   英国   地中海"/>
+            <button style="width: 125px; height: 48px; background: #e8420a; border: none; float: left">
+              <img src="img/search.png" style="margin-left: 10px; margin-top: 5px">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#generic" data-slide="prev">
+        <img src="img/left.png" class="img-responsive" style="float: left; margin-top: 180px">
+      </a>
+      <a class="right carousel-control" href="#generic" data-slide="next">
+        <img src="img/right.png" class="img-responsive" style="float: right; margin-top: 180px">
+      </a>
+    </div>
+    <!-- 机场接送 -->
+    <div class="container" >
+      <div class="row" style="margin: 0 auto; height: 364px;">
+        <div class="col-lg-9" style="position: relative">
+          <img src="img/Sbanner2.jpg"  style="margin-left: -15px">
+          <div style="position: absolute; left: 550px; top: 15px; color: white">
+            <h2>机场接送  省钱省心</h2>
+            <p>提供上海、苏州、无锡各市</p>
+            <p>往返机场、码头接送服务，更有包车服务</p>
+          </div>
+        </div>
+        <div class="col-lg-3" style="background: #14316d; height: 364px">
+          <img src="img/car.png" style="margin-top: 77px; margin-left: 85px;">
+          <p style="color: white; font-size: 20px; margin-left: 90px; margin-top: 10px">车辆接送</p>
+          <button type="button"class="btn-primary btn btn-lg" style="border-color: white; background: #14316d; color: white; font-size: 19px; width:160px; height: 53px;
+          margin-left: 55px; margin-top: 40px">查看详情</button>
+        </div>
+      </div>
+    </div>
+    <!-- 热门路线 -->
+    <p style="text-align: center; margin-top: 20px; font-size: 20px" id='rmlx'>热 门 路 线</p>
+    <p style="text-align: center; margin-bottom:30px;">Popular tourist routes</p>
+    <div class="container" style="margin: 0 auto; color: white">
+      <div class="row" >
+        <div class="col-lg-6">
+          <div class="row-lg-6">
+            <img src="img/hot1.jpg" class="img-responsive">
+            <div style="height: 76px; background: black; margin-bottom: 3px">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
+              <p style="margin-left: 50px; font-size: 16px; line-height: 5px">￥<span style="font-size: 20px">2580</span> / 人起
+            </div>
+          </div>
+          <div class="row-lg-6 row-xs-6">
+            <img src="img/hot2.jpg" class="img-responsive">
+            <div style="height: 76px; background: black;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">德法意瑞欧洲4国，ABCD任意线路由您挑选</p>
+              <p style="margin-left: 50px; font-size: 16px; line-height: 5px">￥<span style="font-size: 20px">7999</span> / 人起
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" >
+          <div class="row-lg-4" style="position: relative;">
+            <img src="img/hot3.jpg" class="img-responsive" style="margin-bottom: 4px;">
+            <div style="width: 555px; height: 55px; background: black; opacity: 0.6; position:absolute; top: 211px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 30px">曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</p>
+              <p style="margin-left: 50px; font-size: 16px; line-height: 1px">￥<span style="font-size: 20px">2799</span> / 人起
+            </div>
+          </div>
+          <div class="row-lg-4" style="position: relative;">
+            <img src="img/hot4.jpg" class="img-responsive" style="margin-bottom: 4px">
+            <div style="width: 555px; height: 55px; background: black; opacity: 0.6; position:absolute; top: 270px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 30px">日本本州游 樱花、寿司、温泉、美食</p>
+              <p style="margin-left: 50px; font-size: 16px; line-height: 1px">￥<span style="font-size: 20px">5399</span> / 人起
+            </div>
+          </div>
+          <div class="row-lg-4" style="position: relative;">
+            <img src="img/hot5.jpg" class="img-responsive">
+            <div style="width: 555px; height: 55px; background: black; opacity: 0.6; position:absolute; top: 278px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 30px">斯里兰卡7天6晚全景游   保证入住2晚香格里拉</p>
+              <p style="margin-left: 50px; font-size: 16px; line-height: 1px">￥<span style="font-size: 20px">7999</span> / 人起
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 签证推荐 -->
+    <p style="text-align: center; margin-top: 30px; font-size: 20px" id='qztj'>签 证 推 荐</p>
+    <p style="text-align: center;">Visa recommendation</p>
+    <p style="text-align: center;">热门： 日本   马来西亚   美国   意大利   加拿大   新加坡</p>
+    <div class="container" style="margin: 0 auto; margin-top:30px; color: white">
+      <div class="row" >
+        <div class="col-lg-4" style="position: relative;">
+          <img src="img/visa1.jpg" class="img-responsive">
+          <div style="width: 360px; height: 73px; background: black; opacity: 0.6; position:absolute; top: 430px;">
+            <p style="margin-left: 50px; font-size: 16px; line-height: 80px">日本旅游签证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size: 20px">420</span> / 人</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row-lg-6" style="position: relative;">
+            <img src="img/visa2.jpg" class="img-responsive" style="margin-bottom: 6px">
+            <div style="width: 360px; height: 40px; background: black; opacity: 0.6; position:absolute; top: 210px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">新加坡旅游签证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size: 20px">370</span> / 人</p>
+            </div>
+          </div>
+          <div class="row-lg-6" style="position: relative;">
+            <img src="img/visa4.jpg" class="img-responsive">
+            <div style="width: 360px; height: 40px; background: black; opacity: 0.6; position:absolute; top: 210px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">申根旅游签证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size: 20px">999</span> / 人</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row-lg-6" style="position: relative;">
+            <img src="img/visa3.jpg" class="img-responsive" style="margin-bottom: 6px">
+            <div style="width: 360px; height: 40px; background: black; opacity: 0.6; position:absolute; top: 210px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">马来西亚旅游签证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size: 20px">450</span> / 人</p>
+            </div>
+          </div>
+          <div class="row-lg-6" style="position: relative;">
+            <img src="img/visa5.jpg" class="img-responsive">
+            <div style="width: 360px; height: 40px; background: black; opacity: 0.6; position:absolute; top: 210px;">
+              <p style="margin-left: 50px; font-size: 16px; line-height: 40px">美国旅游签证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span style="font-size: 20px">1380</span> / 人</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center">  
+      <button type="button"class="btn-default btn btn-lg" style="border-color:black; background: #dddddd; font-size: 19px; line-height: 20px; width:160px; height: 40px;
+          margin-top: 40px">查看更多 ></button>
+    </p>
+    <img src="img/Bbanner.jpg" class="img-responsive" style="margin-top: 50px;">
+    <!-- 使命与愿景 -->
+    <div class="back">
+      <p style="text-align: center; padding-top: 60px; font-size: 20px" id='smyj'>使命与愿景</p>
+      <p style="text-align: center;">让旅游回归本质，体验纯粹旅游</p>  
+      <div class="container" style="margin: 0 auto; margin-top:30px;">
+        <div class="row">
+          <div class="col-lg-5">
+            <img src="img/mission1.jpg" class="img-responsive">
+          </div>
+          <div class="col-lg-7" style="background: #14316d; opacity: 0.8; height: 323px; color: white; ">
+            <p style="font-size: 22px; text-align:center; margin-top:70px; margin-bottom: 25px">服务理念及优势</p>
+            <p style="font-size: 17px; text-align:left; line-height:35px; margin: 0 55px">英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" style="overflow: hidden; margin: 0 auto">
+            <img src="img/mission2.jpg" class="img-responsive">
+          </div> 
+        </div>
+      </div>  
+    </div>
+    <div class="container" >
+      <div class="row" style="margin: 0 auto; height: 390px; background: #1c5080; color: white;">
+        <div class="col-lg-4" style="position: relative">
+          <img src="img/rorate.png" style="margin-left: 80px; margin-top: 50px; text-align: center">
+          <img src="img/icon1.png" style="position: absolute; top: 90px; left: 160px">
+          <p style=" font-size: 20px; position: absolute; top: 160px; left: 150px">品质行程</p>
+          <div style="text-align: center; margin-top: 30px; margin-left: 20px;">
+            <p>旅游达人精心设计、基于口碑反复打磨，</p>
+            <p>全网最好，敢跟任何产品比</p>
+          </div>
+        </div>
+        <div class="col-lg-4" style="position: relative">
+          <img src="img/rorate.png" style="margin-left: 80px; margin-top: 50px; text-align: center">
+          <img src="img/icon2.png" style="position: absolute; top: 90px; left: 160px">
+          <p style="font-size: 20px; position: absolute; top: 160px; left: 150px">品质消费</p>
+          <div style="text-align: center; margin-top: 30px; margin-left: 5px">
+            <p>不推自费，</p>
+            <p>不进垃圾购物店和伪景点</p>
+          </div>
+        </div>
+        <div class="col-lg-4" style="position: relative">
+          <img src="img/rorate.png" style="margin-left: 80px; margin-top: 50px; text-align: center">
+          <img src="img/icon3.png" style="position: absolute; top: 90px; left: 160px">
+          <p style="font-size: 20px; position: absolute; top: 160px; left: 150px">品质小团</p>
+          <div style="text-align: center; margin-top: 30px; margin-left: 10px;">
+            <p>独立成团不散拼，</p>
+            <p>只跟亲朋好友一起玩，每天发团</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="container-fluid" style="height: 450px; background: black;">
+      <div class="container" style="margin: 0 auto; color: white">   
+        <ul class="list-inline" style="margin-top: 40px;">
+          <li style="font-size: 18px; margin-right: 30px; margin-top: 0;">合作伙伴</li>
+          <li>
+            <img src="img/17.png" class="img-responsive">
+            <p style="text-align: center">携程网</p>
+          </li>
+          <li>
+            <img src="img/18.png" class="img-responsive">
+            <p style="text-align: center">阿里飞猪</p>
+          </li>
+          <li>
+            <img src="img/19.png" class="img-responsive">
+            <p style="text-align: center">去哪儿</p>
+          </li>
+          <li>
+            <img src="img/20.png" class="img-responsive">
+            <p style="text-align: center">苏州旅游局</p>
+          </li>
+        </ul>
+        <ul class="list-inline">
+          <li style="font-size: 18px; margin-right: 30px">热门位置</li>
+          <li>韩国</li>
+          <li>日本</li>
+          <li>菲律宾</li>
+          <li>越南</li>
+          <li>老挝</li>
+          <li>泰国</li>
+          <li>马来西亚</li>
+          <li>新加坡</li>
+          <li>印度尼西亚</li>
+          <li>印度</li>
+          <li>斯里兰卡</li>
+          <li>土耳其</li>
+          <li>阿联酋</li>
+          <li>西班牙</li>
+          <li>意大利</li>
+          <li>希腊</li>
+          <li>法国</li>
+          <li>比利时</li>
+          <li>荷兰</li>
+          <li style="margin-left: 115px">英国</li>
+          <li>瑞士</li>
+          <li>奥地利</li>
+          <li>匈牙利</li>
+          <li>俄罗斯</li>
+          <li>捷克</li>
+          <li>葡萄牙</li>
+          <li>冰岛</li>
+          <li>美国</li>
+          <li>加拿大</li>
+          <li>巴西</li>
+          <li>阿根廷</li>
+          <li>澳大利亚</li>
+          <li>新西兰</li>
+        </ul>	
+        <ul class="list-inline" >
+          <li style="font-size: 18px; margin-right: 30px">主题服务</li>
+          <li>海岛度假</li>
+          <li>历史文化</li>
+          <li>探索冒险</li>
+          <li>美食购物</li>
+          <li>都市生活</li>
+          <li>海外游学</li>
+          <li>邮轮度假</li>
+          <li>蜜月摄影</li>
+          <li>亲子乐园</li>
+        </ul>
+        <ul class="list-inline">
+          <li style="font-size: 18px; margin-right: 30px">友情链接</li>
+          <li>马蜂窝</li>
+          <li>穷游</li>
+          <li>booking</li>
+          <li>苏州旅游网</li>
+          <li>吾爱全球签证中心</li>
+          <li>酒店团购</li>
+          <li>携程旅游攻略</li>
+          <li>天巡职航在线</li>
+          <li>满天飞旅游网</li>
+          <li>中国旅游网</li>
+          <li>澳乐网</li>
+          <li>背包兔旅游行程</li>
+          <li style="margin-left: 115px">出境旅游</li>
+          <li>国际酒店</li>
+          <li>广州旅行社</li>
+          <li>出境旅游</li>
+          <li>517旅行</li>
+          <li>花生游</li>
+          <li>家园网</li>
+          <li>海外婚礼</li>
+        </ul>	
+        <p style="text-align: center; margin-top: 80px">苏ICP备14019690、2014-2017 @苏州英华国际旅游有限公司 版权所有</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端 -->
+  <div id="phone" class="width: 100%; background: yellow">
+    <!-- 导航 -->
+    <div class="container">
+      <div class="row" style="margin: 0 auto;">
+        <nav class="navbar navbar-default" id='myNav' style="margin: 0 auto; border:none; background: white">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1" style="background: white; border: none">
+                <span style="background: black" class="icon-bar"></span>
+                <span style="background: black" class="icon-bar"></span>
+                <span style="background: black" class="icon-bar"></span>
+            </button>
+            <img src="img/logo.png" class="img-responsive" style="margin-right: 250px; float: left;"> 
+            <button type="button" class="btn-default btn btn-lg" style="margin-top: 5px; border:none; background: #e8420a; color: white; float: left; font-size: 19px; line-height: 20px; width:150px; height: 40px;">快速定制</button> 
+          </div>
+          <div class="collapse navbar-collapse" id="col-1">
+            <ul class="nav navbar-nav">
+              <li style="margin-right: 20px"><a href="#shouye" style="color: #e8420a; text-decoration:underline;">首页</a></li>
+              <li style="margin-right: 20px"><a href="#rmlx">热门路线</a></li>
+              <li style="margin-right: 20px"><a href="#qztj">签证推荐</a></li>
+              <li style="margin-right: 20px"><a href="#smyj">使命愿景</a></li>   
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- 轮播 -->
+    <div id="generic" class="carousel slide" data-ride="carousel">
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner" >
+        <div class="item active" style="position: relative;">
+          <img alt="First slide" src="img/banner.jpg" class="img-responsive" alt="Responsive-img">
+          <div style="position: absolute; left: 30px; top: 20px; color: white;">
+            <h2>悠游古欧洲 遍览德法瑞意</h2>
+            <p style="font-size: 20px">全程升级热早+1晚5星酒店</p>
+          </div>
+          <div style="position: absolute; left: 30px; top: 150px; width:550px; height: 48px">
+            <div style="width: 130px; height: 48px; background: #d3d3d8; float: left">
+              <img src="img/position.png" style="margin-top: 2px; margin-left: 20px">
+              <span style="margin-left: 10px; line-height: 50px; font-size: 15px; color: #9fa0a1">目的地</span>
+            </div>
+            <input type="text" style="width: 230px; height: 48px; float: left" placeholder="  |  日本   美国   英国   地中海"/>
+            <button style="width: 100px; height: 48px; background: #e8420a; border: none; float: left">
+              <img src="img/search.png" style="margin-left: 5px; margin-top: 5px">
+            </button>
+          </div>
+        </div>
+        <div class="item" style="position: relative">
+          <img alt="Second slide" src="img/banner2.jpg" class="img-responsive" alt="Responsive-img">
+          <div style="position: absolute; left: 30px; top: 20px; color: white;">
+            <h2>悠游古欧洲 遍览德法瑞意</h2>
+            <p style="font-size: 20px">全程升级热早+1晚5星酒店</p>
+          </div>
+          <div style="position: absolute; left: 30px; top: 150px; width:550px; height: 48px">
+            <div style="width: 130px; height: 48px; background: #d3d3d8; float: left">
+              <img src="img/position.png" style="margin-top: 2px; margin-left: 20px">
+              <span style="margin-left: 10px; line-height: 50px; font-size: 15px; color: #9fa0a1">目的地</span>
+            </div>
+            <input type="text" style="width: 230px; height: 48px; float: left" placeholder="  |  日本   美国   英国   地中海"/>
+            <button style="width: 100px; height: 48px; background: #e8420a; border: none; float: left">
+              <img src="img/search.png" style="margin-left: 5px; margin-top: 5px">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" href="#generic" data-slide="prev">
+        <img src="img/left.png" style="float: left; margin-top: 100px">
+      </a>
+      <a class="right carousel-control" href="#generic" data-slide="next">
+        <img src="img/right.png" style="float: right; margin-top: 100px">
+      </a>
+    </div>
+    <div class="row" style="height: 15px; background: #f5f5f5"></div>
+    <!-- 机场接送 -->
+    <div class="container" style="height: 215px;">
+      <div class="row" style="height: 200px; margin: 0 auto;">
+        <div class="col-xs-2">
+          <img src="img/carH.png" style="margin-top: 50px; margin-left: -15px">
+        </div>
+        <div class="col-xs-6">
+          <h3 style="margin-top: 54px; color: #1c5080; margin-left: 10px">机场接送  省心省力</h3>
+          <p style="margin-top: 20px; margin-left: 10px; font-size: 14px">提供上海、苏州、无锡各市</p>
+          <p style="margin-left: 10px; font-size: 14px">往返机场、码头接送服务，更有包车服务</p>
+        </div>
+        <div class="col-xs-4">
+          <button type="button"class="btn-default btn btn-lg" style="font-size: 16px; line-height: 20px; width:100px; height: 40px; text-align: center; margin-top: 80px; border-color: #b5b5b5; background: white; color: #666666">查看详情</button>
+        </div>    
+      </div>
+      <div class="row" style="height: 15px; background: #f5f5f5"></div>
+    </div>
+    <!-- 热门路线 -->
+    <div class="container">
+      <div class="row" style="margin: 0 auto; height: 1160px; position: relative;">
+        <div style="height: 40px; margin: 0 auto; margin-bottom: 20px; margin-top: 30px; border-bottom: 2px solid #f5f5f5;">
+          <p style="font-size: 18px"><span style="color: #e8420a">|</span>  热门路线</p>
+        </div> 
+        <img src="img/hot1.jpg" class="img-responsive"  style="width: 100%; margin-bottom: 10px;">
+        <div style="width: 100%; margin: 0 auto; height: 76px; background: black; opacity: 0.8; position: absolute; top: 453px; color: white;">
+          <div class="row">
+            <div class="col-xs-8">
+              <p style="font-size: 16px; margin-left: 20px; margin-top: 10px">海南三亚5天4晚</p>
+              <p style="font-size: 16px; margin-left: 20px; line-height: 20px">纯玩、4晚红树林度假王国</p>
+            </div>
+            <div class="col-xs-4">
+              <p style="font-size: 16px; margin-left: 30px; margin-top: 20px">￥<span style="font-size: 25px">2580</span> / 人起</p>
+            </div>
+          </div>
+        </div>
+        <img src="img/hot2.jpg" class="img-responsive" style="width: 100%;">
+        <div style="width: 100%; margin: 0 auto; height: 76px; background: black; opacity: 0.8; position: absolute; top: 963px; color: white;">
+          <div class="row">
+            <div class="col-xs-8">
+              <p style="font-size: 16px; margin-left: 20px; margin-top: 10px">德法意瑞欧洲4国</p>
+              <p style="font-size: 16px; margin-left: 20px; line-height: 20px">ABCD任意线路由您挑选</p>
+            </div>
+            <div class="col-xs-4">
+              <p style="font-size: 16px; margin-left: 30px; margin-top: 20px">￥<span style="font-size: 25px">7999</span> / 人起</p>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center">
+          <button type="button"class="btn-default btn btn-lg" style="border-color: #b5b5b5; background: white; color: #666666; font-size: 19px; line-height: 20px; width:160px; height: 40px;
+            margin-top: 40px">查看更多 ></button>
+        </p>
+      </div>
+      <div class="row" style="height: 15px; background: #f5f5f5"></div>
+    </div>
+    <!-- 签证推荐 -->
+    <div class="container">
+      <div class="row" style="margin: 0 auto; height: 780px;">
+        <div style="height: 40px; margin: 0 auto; margin-bottom: 20px; margin-top: 30px; border-bottom: 2px solid #f5f5f5;">
+          <p style="font-size: 18px"><span style="color: #e8420a">|</span>  签证推荐</p>
+        </div> 
+        <div class="row">
+          <div class="col-xs-5" style="position: relative;">
+            <img src="img/visa1.jpg" class="img-responsive" style="height: 100%;">
+            <div style="width: 90%; height: 40px; background: black; opacity: 0.8; position: absolute; top: 515px; color: white;">
+              <div class="row">
+                <div class="col-xs-8">
+                  <p style="font-size: 16px; margin-left: 20px; margin-top: 10px">日本旅游签证 </p>
+                </div>
+                <div class="col-xs-4">
+                  <p style="font-size: 16px; line-height: 40px">￥<span style="font-size: 21px">420</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-7">
+            <div class="row">
+              <div class="row-xs-6" style="position: relative;">
+                <img src="img/visa2.jpg" class="img-responsive"  style="margin-bottom: 4px;">
+                <div style="width: 97.2%; height: 40px; background: black; opacity: 0.8; position: absolute; top: 235px; color: white;">
+                  <div class="row">
+                    <div class="col-xs-8">
+                      <p style="font-size: 16px; margin-left: 20px; margin-top: 10px">美国旅游签证 </p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p style="font-size: 16px; line-height: 40px; margin-left: 30px;">￥<span style="font-size: 21px">1380</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row-xs-6" style="position: relative;">
+                <img src="img/visa3.jpg" class="img-responsive"  style="margin-bottom: 10px;">
+                <div style="width: 97.5%; height: 40px; background: black; opacity: 0.8; position: absolute; top: 235px; color: white;">
+                  <div class="row">
+                    <div class="col-xs-8">
+                      <p style="font-size: 16px; margin-left: 20px; margin-top: 10px">新加坡旅游签证 </p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p style="font-size: 16px; line-height: 40px; margin-left: 30px;">￥<span style="font-size: 21px">370</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center">
+          <button type="button"class="btn-default btn btn-lg" style="border-color: #b5b5b5; background: white; color: #666666; font-size: 19px; line-height: 20px; width:160px; height: 40px;
+            margin-top: 35px">查看更多 ></button>
+        </p>
+      </div>
+      <div class="row" style="height: 15px; background: #f5f5f5"></div>
+    </div>
+    <!-- 使命与愿景 -->
+    <div class="container" >
+      <div class="row" style="margin: 0 auto; height: 1000px">
+        <div style="height: 40px; margin: 0 auto; margin-top: 30px; border-bottom: 2px solid #f5f5f5;">
+          <p style="font-size: 18px"><span style="color: #e8420a">|</span>  使命与愿景：<span style="font-size: 14px">让旅游回归本质，体验纯粹旅游</span></p>
+        </div> 
+        <div style="width: 100%; background: url(img/back.png) no-repeat center;">
+          <img src="img/mission1.jpg" class="img-responsive" style="margin-top: 20px; width: 100%">
+          <p style="text-align: center; font-size: 20px; margin-top: 40px">--服务理念--</p>
+          <p style="font-size: 15px">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+          <img src="img/mission2.jpg" class="img-responsive" style="margin-top: 20px">
+        </div>
+      </div>
+      <!-- 服务优势 -->
+      <p style="text-align: center; font-size: 20px; margin-top: 30px;">--服务优势--</p>
+      <div class="col" style="height: 552px; margin: 0 auto">
+        <div class="row-xs-4" style="height: 184px; border-bottom: 1px solid #e8e8e8;">
+          <div class="col-xs-3">
+            <img src="img/icon11.png" style="margin-top: 40px; margin-left: 20px">
+          </div>
+          <div class="col-xs-9" >
+            <div style="line-height: 15px; font-size: 14px;margin-left: 10px; margin-top: 35px">
+              <p>旅游达人精心设计、基于口碑反复打磨，</p>
+              <p>告别人山人海鸡肋景点。</p>    
+              <p>全网最好，敢跟任何产品比</p>   
+            </div>
+          </div>
+        </div>
+        <div class="row-xs-4" style="height: 184px; border-bottom: 1px solid #e8e8e8;">
+          <div class="col-xs-3">
+            <img src="img/icon22.png" style="margin-top: 40px; margin-left: 20px">
+          </div>
+          <div class="col-xs-9">
+            <div style="line-height: 15px; font-size: 14px;margin-left: 10px; margin-top: 55px">
+              <p>不推自费，</p>
+              <p>不进垃圾购物店和伪景点</p> 
+            </div>
+          </div>
+        </div>
+        <div class="row-xs-4" style="height: 184px; border-bottom: 1px solid #e8e8e8;">
+          <div class="col-xs-3">
+            <img src="img/icon33.png" style="margin-top: 40px; margin-left: 20px">
+          </div>
+          <div class="col-xs-9">
+            <div style="line-height: 15px; font-size: 14px;margin-left: 10px; margin-top: 55px">
+              <p>独立成团不散拼，</p>
+              <p>只跟亲朋好友一起玩，每天发团 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div style="width: 100%; color:white; height:300px; background: #343235; margin-top: 40px">
+      <div style="text-align: center; font-size: 18px; padding-top: 100px">
+        <p>苏ICP备14019690号、2014-2017</p>   
+        <p>@苏州英华国际旅游有限公司 版权所有</p>
+        <p>技术支持&nbsp;&nbsp;杭州联橙科技</p>
+      </div>
+    </div>
+  </div>  
+  <script src="js/jquery.js"></script>    
+  <script src="js/bootstrap.min.js"></script>   
+</body>
+</html>
